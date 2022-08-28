@@ -879,6 +879,19 @@
 <script src="js/Demo.js"></script>
 <link rel="stylesheet" href="css/Demo.min.css" />
  
+<!-- Disable Right Click -->
+<script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+     </script>
+    <!-- Disable Keybord Shortcut -->
+    <script>
+    	 document.onkeydown = function(e) {
+                if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly.
+                    alert('not allowed');
+                }
+                return false;
+        };
+    </script>
 
 </body>
 </html>
